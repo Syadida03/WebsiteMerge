@@ -121,15 +121,13 @@ span {
 
 /* SECTION KEDUA */
 .kuis-section {
-  background: rgb(27, 57, 87);
+  /* background: rgb(27, 57, 87); */
   color: #ffffff;
-  padding: 40px 20px;
+  padding-top: 10px;
   color: lightgray;
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin: 30px;
-  padding: 40px 20px;
 }
 
 .kuis {
@@ -139,22 +137,22 @@ span {
 }
 
 .pilihanfilm {
-  /* background-color: #f8f9fa; */
   padding: 12px;
-  border-radius: 15px;
-  display: flex;
+  display: grid;
   gap: 15px;
-  justify-content: center;
-}
-.pilihankomik {
-  /* background-color: #f8f9fa; */
-  padding: 12px;
-  border-radius: 15px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-items: center;
 }
 
+.pilihankomik {
+  padding: 12px;
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+/* Bagian Tontonan */
 .dracin {
   background-color: #e5e8eb;
   background-image: url("https://i.pinimg.com/736x/fe/de/43/fede433f19569918306aadb32bcd1377.jpg");
@@ -184,13 +182,51 @@ span {
 .filmindo {
   background-color: #e5e8eb;
   background-image: url("https://i.pinimg.com/736x/b6/19/c1/b619c1d68007c3e2e211d092dce03aab.jpg");
+  background-size: contain;
+  height: 200px;
+  width: 150px;
+  border-radius: 50px;
+}
+.j-drama {
+  background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/71/28/28/712828fec76d27555965747010aeb028.jpg");
+  background-size: contain;
   height: 200px;
   width: 150px;
   border-radius: 50px;
 }
 
+.anime {
+  background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/f9/6b/8a/f96b8a71c8df5cf164ad841eceb4587d.jpg");
+  background-size: contain;
+  height: 200px;
+  width: 150px;
+  border-radius: 50px;
+}
+
+.donghua {
+  background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/9a/96/f7/9a96f7e6a80ccb025fb971d4893f513c.jpg");
+  background-size: contain;
+  height: 200px;
+  width: 150px;
+  border-radius: 50px;
+}
+.ani-barat {
+  background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/2c/e8/6f/2ce86f520b98a69ad5f1339f89f984a4.jpg");
+  background-size: contain;
+  height: 200px;
+  width: 150px;
+  border-radius: 50px;
+}
+
+/* Bagian Bacaan */
 .manga {
   background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/1c/c4/f3/1cc4f34d216f2fb9f57943d961ecc22d.jpg");
+  background-size: contain;
   height: 200px;
   width: 150px;
   border-radius: 50px;
@@ -198,6 +234,8 @@ span {
 
 .manhwa {
   background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/5a/8b/78/5a8b784f609c59a5c8ed0db0f39a0d81.jpg");
+  background-size: contain;
   height: 200px;
   width: 150px;
   border-radius: 50px;
@@ -205,12 +243,16 @@ span {
 
 .manhua {
   background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/49/ee/f8/49eef836675c68d2f2a91e4b7bc8613d.jpg");
+  background-size: contain;
   height: 200px;
   width: 150px;
   border-radius: 50px;
 }
 .komik {
   background-color: #e5e8eb;
+  background-image: url("https://i.pinimg.com/736x/6c/db/b5/6cdbb50aecd3cdbf89c9d7a2b3d2ca0f.jpg");
+  background-size: contain;
   height: 200px;
   width: 150px;
   border-radius: 50px;
@@ -234,7 +276,7 @@ span {
 .grid-section {
   background-color: #2b5876;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 25px;
   padding: 20px;
   color: #909eac;
@@ -290,76 +332,25 @@ span {
 .footer {
   padding: 30px;
 }
-
 .app {
   display: flex;
   justify-content: center;
-  text-align: center;
   gap: 40px;
   padding: 30px;
   font-size: 50px;
 }
-
-.github {
+.github i {
   color: #1a1a1a;
 }
-
-.email {
-  color: #ffffff;
-  background-color: tomato;
+.email i {
+  color: #aa3227;
 }
-
-.dc {
-  color: mediumpurple;
+.dc i {
+  color: #5865f2;
 }
-
-/* .footer {
-  border-top: 1px solid #ccc;
-  padding: 25px 15px;
-  text-align: center;
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
+.donate i {
+  color: #aa3227;
 }
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 15px;
+.x i {
+  color: #1a1a1a;
 }
-
-.icon-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 22px;
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-}
-
-.icon-discord {
-  background-color: #5865f2;
-}
-
-.icon-twitter {
-  background-color: #1da1f2;
-}
-
-.icon-github {
-  background-color: #24292e;
-}
-
-.icon-box {
-  background-color: #f1b343;
-}
-
-.icon-email {
-  background-color: #db4437;
-} */
